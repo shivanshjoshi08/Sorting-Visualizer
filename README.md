@@ -2,10 +2,7 @@
 
 An interactive web application built to visualize the inner workings of various sorting algorithms. This project uses HTML, CSS, and vanilla JavaScript to provide a clear, visual representation of the sorting process, helping users understand how each algorithm operates.
 
-![Sorting Visualizer Screenshot](https://i.imgur.com/your-screenshot.png)
 
-
----
 
 ## 🚀 Live Demo
 

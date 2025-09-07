@@ -1,80 +1,100 @@
-Sorting Algorithm Visualizer
-An interactive web-based tool built with Vanilla JavaScript, HTML, and CSS to visualize the inner workings of various sorting algorithms. This project provides a clear, step-by-step visual representation of how different algorithms sort an array of numbers, making complex concepts easier to understand.
+# Sorting Algorithm Visualizer
 
-✨ Features
-Multiple Algorithms: Visualize six fundamental sorting algorithms:
+An interactive web application built to visualize the inner workings of various sorting algorithms. This project uses HTML, CSS, and vanilla JavaScript to provide a clear, visual representation of the sorting process, helping users understand how each algorithm operates.
 
-Bubble Sort
+![Sorting Visualizer Screenshot](https://i.imgur.com/your-screenshot.png)
 
-Selection Sort
 
-Insertion Sort
+---
 
-Merge Sort
+## 🚀 Live Demo
 
-Quick Sort
+**[Check out the live version here!](https://sorting-visualizer-five-jade.vercel.app/)**
 
-Heap Sort
 
-Interactive Controls:
 
-Generate New Array: Create a new random array of bars to sort.
+---
 
-Array Size Slider: Dynamically change the number of elements in the array (from 10 to 150).
+## ✨ Features
 
-Start & Stop: Full control to start and stop the sorting process at any time.
+-   **Multiple Algorithms**: Visualize 6 popular sorting algorithms:
+    -   Bubble Sort
+    -   Selection Sort
+    -   Insertion Sort
+    -   Merge Sort
+    -   Quick Sort
+    -   Heap Sort
+-   **Interactive Controls**:
+    -   **Generate New Array**: Create a new random array to sort.
+    -   **Array Size Slider**: Easily adjust the number of elements in the array (from 10 to 150).
+    -   **Sort & Stop**: Full control to start and stop the animation at any point.
+-   **Live Timer**: A real-time timer shows the duration of the sorting process, with a precise final time displayed upon completion.
+-   **Algorithm Details**: Displays the Time Complexity (Best, Average, Worst) and Space Complexity for the selected algorithm.
+-   **Clear Visualization**:
+    -   Bars are color-coded to indicate their current state:
+        -   🔴 **Comparing**: Red bars are being compared.
+        -   🟡 **Swapping/Pivoting**: Yellow bars indicate a swap or a pivot element.
+        -   🟢 **Sorted**: Green bars are in their final sorted position.
+-   **Responsive Design**: The layout is fully responsive and works smoothly on desktops, tablets, and mobile devices.
 
-Real-time Visualization:
+---
 
-Bars are color-coded to represent their current state:
+## 🛠️ Technologies Used
 
-Blue: Default state.
+-   **HTML5**: For the basic structure and content.
+-   **CSS3**: For custom styling and animations.
+-   **[Tailwind CSS](https://tailwindcss.com/)**: A utility-first CSS framework for modern and responsive styling.
+-   **Vanilla JavaScript (ES6+)**: For all the logic, DOM manipulation, and algorithm implementation.
 
-Red: Elements being compared.
+---
 
-Yellow: Pivot element or elements being swapped.
+## 📂 How to Use
 
-Green: Element is in its final sorted position.
+To run this project locally, follow these simple steps:
 
-Performance Metrics:
+1.  **Clone the repository or download the files:**
+    ```sh
+    git clone [https://github.com/your-github-username/your-repo-name.git](https://github.com/your-github-username/your-repo-name.git)
+    ```
+    Make sure you have `index.html`, `style.css`, and `script.js` in the same directory.
 
-Live Timer: A running timer shows the elapsed time while the algorithm is running.
+2.  **Open the HTML file:**
+    Navigate to the project directory and open the `index.html` file in your favorite web browser (like Chrome, Firefox, or Edge).
 
-Time Taken: Displays the precise time taken for the sort to complete.
+3.  **Enjoy!**
+    You can now interact with the visualizer.
 
-Complexity Analysis: Shows the Best, Average, and Worst-case Time and Space complexities for the selected algorithm.
+---
 
-Responsive Design: The visualizer is designed to work smoothly on different screen sizes.
+## ⚙️ Code Structure & Overview
 
-🚀 Live Demo
-Check out the live demo here!
+The project is organized into three separate files for better maintainability:
 
-🛠️ Technologies Used
-Frontend: HTML5, CSS3, JavaScript (ES6+)
+### 📄 `index.html`
+This file contains the main structure of the web page.
+-   It sets up the header with all user controls (buttons, sliders, dropdown).
+-   Defines the container (`#bar-container`) for the visualization and the details panel.
+-   Links to the `style.css` stylesheet and the `script.js` file.
 
-Styling: Tailwind CSS for a modern, utility-first UI.
+### 🎨 `style.css`
+This file holds all the custom CSS rules that complement Tailwind CSS.
+-   It includes styling for the range slider to ensure a consistent look across browsers.
+-   Defines the core `bar` style and the color-coded state classes: `.bar-compare`, `.bar-swap`, and `.bar-sorted`.
 
-Fonts: Google Fonts (Inter) for clean and readable typography.
+### 💻 `script.js`
+This is the heart of the application, containing all the dynamic logic.
+-   **DOM Manipulation**: Selects all necessary HTML elements to interact with.
+-   **State Management**: Uses variables like `array`, `isSorting`, `stopSorting`, and `timerInterval` to track the application's state.
+-   **Core Functions**: Includes helpers like `generateArray()`, `renderBars()`, `toggleControls()`, and `delay()`.
+-   **Event Listeners**: Manages all user interactions, triggering the appropriate functions.
+-   **Timer Logic**: Uses `performance.now()` to accurately measure the sorting duration and `setInterval` to display a live-updating timer during the sort.
+-   **Sorting Algorithms**: Each algorithm is implemented as an `async` function that modifies the array and updates the DOM elements' styles to create the visual animation, using `await delay()` to control the speed.
 
-⚙️ Getting Started
-To get this project running on your local machine, follow the steps below:
+---
 
-Clone the repository:
+## 🔮 Future Improvements
 
-git clone [https://github.com/shivanshjoshi08/sorting-visualizer.git]
-
-Navigate to the project directory:
-
-cd sorting-visualizer
-
-Open the application:
-Simply open the index.html file in your favorite web browser. No extra installation or build steps are required!
-
-💡 How It Works
-Array Representation: The array of numbers is visually represented by div elements (bars). The height of each bar is proportional to the numerical value it represents.
-
-Asynchronous Visualization: The core of the visualization is handled using async/await functions in JavaScript. A small delay() is introduced after each comparison or swap. This allows the browser to re-render the UI and display the changes step-by-step, instead of freezing and showing only the final result.
-
-Dynamic Styling: As the algorithms run, CSS classes (.bar-compare, .bar-swap, .bar-sorted) are dynamically added or removed from the bars to change their color and reflect the current operation.
-
-Happy Sorting!
+-   [ ] Add a **Speed Control Slider** to adjust the animation delay.
+-   [ ] Implement more sorting algorithms (e.g., Radix Sort, Counting Sort).
+-   [ ] Show a live counter for the number of comparisons and array swaps.
+-   [ ] Add sound effects for comparison and swap operations for a more immersive experience.

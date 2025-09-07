@@ -54,7 +54,7 @@ To run this project locally, follow these simple steps:
 
 1.  **Clone the repository or download the files:**
     ```sh
-    git clone [https://github.com/your-github-username/your-repo-name.git](https://github.com/your-github-username/your-repo-name.git)
+    git clone [https://github.com/shivanshjoshi08/Sorting-Visualizer.git]
     ```
     Make sure you have `index.html`, `style.css`, and `script.js` in the same directory.
 
